@@ -101,7 +101,7 @@ export const DonationService = {
             donation_id: String(donation.id),
             cause:       causeSlug,
           },
-          automatic_payment_methods: { enabled: true, allow_redirects: "never" },
+          payment_method_types: ["card"],
         });
 
         if (intent.status !== "succeeded") {
